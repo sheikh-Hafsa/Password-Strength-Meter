@@ -39,7 +39,8 @@ def check_password_strength(password):
     #special character
     if re.search(r"[!@#$%^&*]", password):
         score += 1
-    feedback.append("❌ Include **atleast one special character(!@#$%^&*)**")
+    else:
+        feedback.append("❌ Include **atleast one special character(!@#$%^&*)**")
 
     #display password strength letter
     if score == 4:
